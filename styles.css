@@ -42,7 +42,7 @@ header{
 header h1{
     font-size: 2.5rem;
     grid-column: 2 / 3;
-    color: var(--title-color);
+    color: var(--google-blue);
     text-align: center;
 }
 
@@ -75,7 +75,7 @@ li a img{
 
 main{
     text-align: center;
-    height: 500px;
+    /* height: 500px; */
     margin-top: 20px;
     padding: 15px 15px 0 15px;
 }
@@ -86,6 +86,7 @@ main ol{
 
 main h2{
     font-size: 2.5rem;
+    color: var(--google-green);
 }
 
 main ol{
@@ -231,8 +232,8 @@ main ol li a{
 
 
 
-/* MODAL */
-.modal{
+/* side-bar */
+.side-bar{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
@@ -245,7 +246,7 @@ main ol li a{
     overflow-y: scroll;
 }
 
-.modal__content{
+.side-bar__content{
     display: flex;
     flex-direction: column;
     justify-items: start;
@@ -269,7 +270,7 @@ main ol li a{
 
 /* PERFIL */
 
-.modal__content--profile{
+.side-bar__content--profile{
     height: 75px;
     width: 100%;
     display: flex;
@@ -279,12 +280,12 @@ main ol li a{
     background: var(--section-color);
 }
 
-.modal__content--profile img{
+.side-bar__content--profile img{
     width: 40px;
     height: 40px;
 }
 
-.modal__content--google-photos, .modal__content--library, .modal__content--others, .modal__content--storage{
+.side-bar__content--google-photos, .side-bar__content--library, .side-bar__content--others, .side-bar__content--storage{
     height: 250px;
     width: 100%;
     display: grid;
@@ -373,11 +374,11 @@ main ol li a{
 
 /* BIBLIOTECA */
 
-.modal__content--library{
+.side-bar__content--library{
     height: 250px;
 }
 
-.modal__content--library h3{
+.side-bar__content--library h3{
     font-size: 1.2rem;
     color: var(--subtitle-color);
     padding-left: 10px;
@@ -388,7 +389,7 @@ main ol li a{
 
 /* OTROS */
 
-.modal__content--others{
+.side-bar__content--others{
     margin-top: 10px;
     height: 175px;
 }
@@ -400,7 +401,7 @@ hr{
 
 /* Almacenamiento */
 
-.modal__content--storage{
+.side-bar__content--storage{
     height: 125px;
 }
 
@@ -438,14 +439,40 @@ hr{
     padding-right: 30px;
 }
 
-.modal__content-footer{
+.side-bar__content-footer{
     display: flex;
     justify-content: center;
 }
-.modal__content-footer a{
+.side-bar__content-footer a{
     font-size: 1.3rem;
     text-decoration: none;
     color: var(--title-color);
     margin: 15px 20px 0 5px;
 }
 
+/* FOOTER */
+
+footer{
+    height: 75px;
+    background: var(--section-color);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+footer a img{
+    height: 30px;
+}
+
+footer a p{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: var(--title-color);
+}
