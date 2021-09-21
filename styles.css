@@ -1,5 +1,6 @@
 :root{
     --title-color: #5f6368;
+    --subtitle-color: #80868b;
     --google-blue: #507fef;
     --google-red: #e31738;
     --google-yellow: #f6c329;
@@ -7,6 +8,7 @@
     --section-color: #f1f3f4;
     --hover-color: #1a8fed;
     --hover-background: #e8f0fe;
+    --hover-background-secondary: #f9f9fa;
 }
 
 *{
@@ -33,7 +35,7 @@ header{
     grid-template-rows: 1fr;
     /* margin:10px 0 15px 0; */
     align-items: center;
-    border-bottom: solid 1px var(--title-color);
+    /* border-bottom: solid 1px var(--title-color); */
     background: var(--section-color);
 }
 
@@ -239,6 +241,8 @@ main ol li a{
 
     display: grid;
     place-items: start;
+
+    overflow-y: scroll;
 }
 
 .modal__content{
@@ -261,10 +265,12 @@ main ol li a{
 
 
 
+
+
 /* PERFIL */
 
 .modal__content--profile{
-    height: 80px;
+    height: 75px;
     width: 100%;
     display: flex;
     justify-content: end;
@@ -278,8 +284,8 @@ main ol li a{
     height: 40px;
 }
 
-.modal__content--google-photos{
-    height: 200px;
+.modal__content--google-photos, .modal__content--library, .modal__content--others, .modal__content--storage{
+    height: 250px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -308,12 +314,13 @@ main ol li a{
     color: var(--title-color);
 }
 
+/* LINKS DIRECTOS */
+
 .google-photos--link-page{
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left: 10px;
     padding: 0 25px 0 25px;
 }
 
@@ -336,12 +343,109 @@ main ol li a{
     height: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-
 }
+
+
+/* SMART APP */
+.hover-section a{
+    text-decoration: none;
+}
+
+/* CONTINUATION */
 
 .hover-section p, .hover-section img{
     color: var(--hover-color);
 }
 
 
+.google-photos--link-page:hover p{
+    color: var(--hover-color);
+}
+
+.google-photos--link-page:hover{
+    background: var(--hover-background-secondary);
+    width: 90%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
 /* BIBLIOTECA */
+
+.modal__content--library{
+    height: 250px;
+}
+
+.modal__content--library h3{
+    font-size: 1.2rem;
+    color: var(--subtitle-color);
+    padding-left: 10px;
+    padding: 0 25px 0 25px;
+    margin-top: 10px;
+}
+
+
+/* OTROS */
+
+.modal__content--others{
+    margin-top: 10px;
+    height: 175px;
+}
+
+hr{
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Almacenamiento */
+
+.modal__content--storage{
+    height: 125px;
+}
+
+.storage-bar__base{
+    margin-left: 75px;
+    height: 5px;
+    width: 112.5px;
+    background-color: var(--section-color);
+    position: relative;
+}
+
+.storage-bar__load{
+    align-self: flex-start;
+    margin-left: 75px;
+    height: 5px;
+    width: 65px;
+    background: var(--google-blue);
+    position: absolute;
+    bottom: -20px;
+}
+.storage-bar__text{
+    display: flex;
+    width: 60%;
+    justify-content: end;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    color: var(--title-color);
+    /* padding: 0 35px 0 40px; */
+    margin-top: 10px;
+}
+.storage-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 30px;
+}
+
+.modal__content-footer{
+    display: flex;
+    justify-content: center;
+}
+.modal__content-footer a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--title-color);
+    margin: 15px 20px 0 5px;
+}
+
