@@ -1,14 +1,21 @@
 const numberOfCarousel = 3
 const numberOfImages = 6
 
+const newSection = document.createElement("section")
+newSection.className = "carousel-container"
 const mainHTML = document.querySelector("main")
+mainHTML.appendChild(newSection)
+const newSectionNode = document.querySelector(".carousel-container")
 
+
+
+//poner el nodo bien 
 const generateCarousel = (i) =>{
     const newCarousel = document.createElement("section")
     newCarousel.className = `images-carousel`
     newCarousel.setAttribute("id",`images-carousel-${i}`)
 
-    mainHTML.append(newCarousel)
+    newSection.append(newCarousel)
 }
 
 for(let i = 1; i < numberOfCarousel + 1; i++){
@@ -23,11 +30,11 @@ const imagesCarousel3 = document.querySelector("#images-carousel-3")
 const getImages = async (carousel) =>{
     try{
         for(let i = 0; i < numberOfImages; i++){
-            let API = "https://picsum.photos/100"
+            let API = "https://picsum.photos/300"
             const response = await fetch(API)
             const url = response.url
             const newImage = document.createElement("img")
-            newImage.className = "randomImg"
+            newImage.className = "random-image"
             newImage.src = url
             carousel.append(newImage)
         } 

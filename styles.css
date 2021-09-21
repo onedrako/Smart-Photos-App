@@ -1,5 +1,9 @@
 :root{
-    --title-color: #5f6368;    
+    --title-color: #5f6368;
+    --google-blue: #507fef;
+    --google-red: #e31738;
+    --google-yellow: #f6c329;
+    --google-green: #23bf5a;
 }
 
 *{
@@ -56,8 +60,9 @@ li a img{
 /* Main section */
 
 main{
-    margin: 25px;
     text-align: center;
+    height: 100%;
+    margin-top: 20px;
 }
 
 main ol{
@@ -77,17 +82,136 @@ main ol li a{
     /* color; */
 }
 
+.carousel-container{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow-x: hidden;
+}
+
 .images-carousel{
     display: flex;
     margin: 15px 0 15px 0;
     overflow-x: hidden;
-    opacity: 70%;  
+    opacity: 70%;
+    position: absolute;  
 }
 
-.images-carousel img{
+#images-carousel-1{
+    right: -360px;
+    animation: carousel 35s linear infinite;
+} 
+
+#images-carousel-2{
+    top: 115px;
+    right: 0;
+    animation: carousel-2 35s linear infinite;
+}
+
+#images-carousel-3{
+    top: 230px;
+    right: -360px;
+    animation: carousel 35s linear infinite;
+}
+
+@keyframes carousel{
+    0%, 100%{
+        right: -360px;
+    }
+    50%{
+        right: 0px;
+    }
+}
+
+@keyframes carousel-2{
+    0%, 100%{
+        right: 0px;
+    }
+    50%{
+        right: -160px;
+    }
+}
+
+
+.random-image{
     margin-left: 5px;
+    width: 100px;
+    height: 100px;
 }
 
+
+/* LOADER */
+
+
+.loader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: absolute;
+    z-index: 3;
+    overflow-x: hidden;
+
+    animation: loader 3s linear forwards;
+}
+
+.loader div{
+    /* background: white; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px;
+
+    transform: scale(0);
+
+    animation: scaling 2s ease-in-out infinite;
+}
+
+.loader div:nth-child(1){
+    animation-delay: 0.2s;
+    background: var(--google-blue);
+}
+
+.loader div:nth-child(2){
+    animation-delay: 0.4s;
+    background: var(--google-red);
+}
+
+.loader div:nth-child(3){
+    animation-delay: 0.6s;
+    background: var(--google-yellow);
+}
+
+.loader div:nth-child(4){
+    animation-delay: 0.8s;
+    background: var(--google-green);
+}
+
+@keyframes loader{
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }   
+    95%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes scaling{
+    0%, 100%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(.2)
+    }
+}
 
 
 
