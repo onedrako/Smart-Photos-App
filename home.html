@@ -9,15 +9,93 @@
   </head>
   <body cz-shortcut-listen="true">
     <script defer src="./main.js"></script>
+    
     <section class="loader"> <!--Estos son los 4 puntos de carga -->
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </section>
+    
+    <section class="modal hidden">
+      <div class="modal__content">
+
+          <section class="modal__content--profile">
+            <img src="https://academia.coworkchillan.cl/wp-content/uploads/2020/03/default_avatar-5298a7fcd9a9a0ce0d2b32e9aa826a32cc521cb5249540190792626b75504b39.png" alt="">
+          </section>
+
+          <section class="modal__content--google-photos">
+            <div class="google-photos--logo">
+              <img src="https://s.libertaddigital.com/2015/09/01/1920/1080/fit/logo-google-2015.png" alt="">
+              <p>Fotos</p>
+            </div>
+            <div class="google-photos--link-page hover-section">
+              <img src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="">
+              <p>Photos</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="">
+              <p>Explore</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/615/615075.png" alt="">
+              <p>Share </p>
+            </div>
+          </section>
+
+          <section class="modal__content--library">
+            <h3>Biblioteca</h3>
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+          </section>
+
+          <section class="modal__content--others">
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+          </section>
+
+          <section class="modal__content--storage">
+            <div>
+              <img src="" alt="">
+              <p></p>
+            </div>
+          </section>
+          <section class="modal__content-footer">
+
+          </section>
+      </div>
+    </section>
 
     <header>
-      <img id="hamburger-menu" src="https://t3.ftcdn.net/jpg/01/66/66/56/240_F_166665616_guHEOd6zztex1rqNXoVzW2tNxIclPJpw.jpg" alt="">
+      <img id="hamburger-menu" src="https://t3.ftcdn.net/jpg/01/66/66/56/240_F_166665616_guHEOd6zztex1rqNXoVzW2tNxIclPJpw.jpg" alt="" onclick="visibleModal()">
       <h1>Smart Photos App</h1>
       <nav>
         <ul>
@@ -38,6 +116,6 @@
         <li>Realiza una búsqueda por palabra de tus fotos dando click <a href="./search.html">aquí</a></li>
       </ol>
 
-</main>
-
-</body></html>
+    </main>
+  </body>
+</html>

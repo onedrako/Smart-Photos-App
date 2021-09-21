@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fotos Inteligentes</title>
     <link rel="stylesheet" href="./styles.css">
-
   </head>
   <body cz-shortcut-listen="true">
     <header>
@@ -18,19 +17,18 @@
         </ul>
       </nav>
     </header>
-    <main>
-      
-  <h2>Búsqueda</h2>
-
-  <form method="get" action="http://104.154.178.76/search">
-    <label for="q">Escribe un término</label>
-    <input type="text" name="q">
-    <button type="submit">Cargar</button>
-  </form>
-
-  
-
+    <main>      
+      <h2>Búsqueda</h2>
+      <form method="get" action="http://104.154.178.76/search">
+        <label for="q">Escribe un término</label>
+        <input type="text" name="q">
+        <button type="submit">Cargar</button>
+      </form>
     </main>
-  
+    <section class="modal hidden">
+      <div class="modal__content">
+      </div>
+    </section>
 
-</body></html>
+</body>
+</html>

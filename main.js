@@ -1,3 +1,5 @@
+//GENERAR LOS NODOS DE IMAGENES RANDOM
+
 const numberOfCarousel = 3
 const numberOfImages = 4
 
@@ -13,8 +15,7 @@ mainHTML.appendChild(newSection)
 const newSectionNode = document.querySelector(".carousel-container")
 
 
-
-//poner el nodo bien 
+ 
 const generateCarousel = (i) =>{
     const newCarousel = document.createElement("section")
     newCarousel.className = `images-carousel`
@@ -27,9 +28,6 @@ const generateCarousel = (i) =>{
 for(let i = 1; i < numberOfCarousel + 1; i++){
     generateCarousel(i)
 }
-
-
-
 
 const getImages = async (carousel) =>{
     try{
@@ -71,4 +69,28 @@ imagesCarousel2.append(...imagesContainer[1])
 imagesCarousel3.append(...imagesContainer[2])
 
 
+
+//MODAL
+
+const modal = document.querySelector(".modal")  
+
+const visibleModal = () =>{
+    modal.classList.remove("hidden")
+    modal.classList.add("visible")
+}
+
+const closeModal = () =>{
+    modal.classList.remove("visible")
+    modal.classList.add("hidden")
+}
+
+document.addEventListener("keyup", KeyboardEvent => verifyToCloseModal(KeyboardEvent))
+document.addEventListener("click", clickEvent => verifyToCloseModal(clickEvent))
+
+function verifyToCloseModal(Event) {
+    // console.log(Event)
+    if(Event.target.className === "modal visible" || Event.keyCode === 27 ){
+        closeModal()
+    } 
+}
 

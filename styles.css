@@ -4,6 +4,9 @@
     --google-red: #e31738;
     --google-yellow: #f6c329;
     --google-green: #23bf5a;
+    --section-color: #f1f3f4;
+    --hover-color: #1a8fed;
+    --hover-background: #e8f0fe;
 }
 
 *{
@@ -31,6 +34,7 @@ header{
     /* margin:10px 0 15px 0; */
     align-items: center;
     border-bottom: solid 1px var(--title-color);
+    background: var(--section-color);
 }
 
 header h1{
@@ -69,8 +73,9 @@ li a img{
 
 main{
     text-align: center;
-    height: 100%;
+    height: 500px;
     margin-top: 20px;
+    padding: 15px 15px 0 15px;
 }
 
 main ol{
@@ -224,5 +229,119 @@ main ol li a{
 
 
 
+/* MODAL */
+.modal{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 5;
+
+    display: grid;
+    place-items: start;
+}
+
+.modal__content{
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    background: white;
+    width: 225px;
+    height: 100%;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: grid;
+}
 
 
+
+/* PERFIL */
+
+.modal__content--profile{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 15px;
+    background: var(--section-color);
+}
+
+.modal__content--profile img{
+    width: 40px;
+    height: 40px;
+}
+
+.modal__content--google-photos{
+    height: 200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    align-items: center;
+    /* padding: 0 25px 0 25px; */
+    /* background: var(--section-color); */
+}
+
+
+/* PRIMERA SECCION GOOGLE PHOTOS */
+
+.google-photos--logo{
+    display: flex;
+    margin: 15px 0 15px 0;
+    padding: 0 25px 0 25px;
+}
+
+.google-photos--logo img{
+    width: 70px;
+    margin-right: 8px;
+}
+
+.google-photos--logo p{
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.google-photos--link-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding: 0 25px 0 25px;
+}
+
+.google-photos--link-page p{
+    font-size: 1.5rem;
+    align-self: center;
+    color: var(--title-color);
+    font-weight: 500;
+}
+
+.google-photos--link-page img{
+    height: 15px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.hover-section{
+    background: var(--hover-background);
+    width: 90%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.hover-section p, .hover-section img{
+    color: var(--hover-color);
+}
+
+
+/* BIBLIOTECA */
