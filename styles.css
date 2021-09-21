@@ -17,7 +17,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 /*Mobile First */
@@ -26,7 +26,8 @@ header{
     display: grid;
     width: 100%;
     height: 75px;
-    grid-template-columns: 15% 45% 40%;
+    grid-template-columns: 15% 50% 35%;
+    grid-template-rows: 1fr;
     /* margin:10px 0 15px 0; */
     align-items: center;
     border-bottom: solid 1px var(--title-color);
@@ -37,6 +38,13 @@ header h1{
     grid-column: 2 / 3;
     color: var(--title-color);
     text-align: center;
+}
+
+header img{
+    grid-column: 0 / 1;
+    width: 35px;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 nav ul{
@@ -83,40 +91,40 @@ main ol li a{
 }
 
 .carousel-container{
+    margin: 10px 0 10px 0;
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 500px;
     overflow-x: hidden;
 }
 
 .images-carousel{
     display: flex;
-    margin: 15px 0 15px 0;
     overflow-x: hidden;
-    opacity: 70%;
+    opacity: 80%;
     position: absolute;  
 }
 
 #images-carousel-1{
-    right: -360px;
-    animation: carousel 35s linear infinite;
+    right: -154px;
+    animation: carousel 20s linear infinite;
 } 
 
 #images-carousel-2{
-    top: 115px;
+    top: 160px;
     right: 0;
-    animation: carousel-2 35s linear infinite;
+    animation: carousel-2 20s linear infinite;
 }
 
 #images-carousel-3{
-    top: 230px;
+    top: 320px;
     right: -360px;
-    animation: carousel 35s linear infinite;
+    animation: carousel 20s linear infinite;
 }
 
 @keyframes carousel{
     0%, 100%{
-        right: -360px;
+        right: -154px;
     }
     50%{
         right: 0px;
@@ -135,8 +143,8 @@ main ol li a{
 
 .random-image{
     margin-left: 5px;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 
@@ -154,7 +162,7 @@ main ol li a{
     z-index: 3;
     overflow-x: hidden;
 
-    animation: loader 3s linear forwards;
+    animation: loader 1.5s linear forwards;
 }
 
 .loader div{
