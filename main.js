@@ -70,9 +70,9 @@ imagesCarousel3.append(...imagesContainer[2])
 
 
 
-//SIDE BAR
+//
 
-const modal = document.querySelector(".side-bar")  
+const modal = document.querySelector(".side-bar--container")  
 
 const visibleModal = () =>{
     modal.classList.remove("hidden")
@@ -89,7 +89,7 @@ document.addEventListener("click", clickEvent => verifyToCloseModal(clickEvent))
 
 function verifyToCloseModal(Event) {
     // console.log(Event)
-    if(Event.target.className === "side-bar visible" || Event.keyCode === 27 ){
+    if(Event.target.className === "side-bar--container visible" || Event.keyCode === 27 ){
         closeModal()
     } 
 }
