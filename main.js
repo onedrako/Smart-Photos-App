@@ -1,7 +1,7 @@
 //GENERAR LOS NODOS DE IMAGENES RANDOM
 
 const numberOfCarousel = 3
-const numberOfImages = 4
+const numberOfImages = 3
 
 const carouselContainer = []
 const imagesContainer = [[],[],[],[],[],[],[],[],[]]
@@ -29,10 +29,10 @@ for(let i = 1; i < numberOfCarousel + 1; i++){
     generateCarousel(i)
 }
 
-const getImages = async (carousel) =>{
+const getImages = async (carousel, numberOfElements) =>{
     try{
-        for(let i = 1; i < numberOfImages; i++){
-            let API = "https://picsum.photos/300"
+        for(let i = 1; i < numberOfElements; i++){
+            let API = "https://picsum.photos/200"
             const response = await fetch(API)
             const url = response.url
             const newImage = document.createElement("img")
@@ -49,14 +49,29 @@ const getImages = async (carousel) =>{
 
 newSection.append(...carouselContainer)
 
-const getLibraryOfImages = async (i) =>{
-    await getImages(i)
+const getLibraryOfImages = async (i, numberOfElements) =>{
+    await getImages(i, numberOfImages)
     document.querySelector(`#images-carousel-${i+1}`).append(...imagesContainer[i])
 }
-getLibraryOfImages(0)
-getLibraryOfImages(1)
-getLibraryOfImages(2)
 
+const mediaqueryList = window.matchMedia("(min-width: 320px)");
+
+if(mediaqueryList.matches){
+    getLibraryOfImages(0, 3)
+    getLibraryOfImages(1, 3)
+    getLibraryOfImages(2, 3)
+    getLibraryOfImages(0, 2)
+    getLibraryOfImages(1, 2)
+    getLibraryOfImages(2, 2)
+}
+
+const mediaqueryList500px = window.matchMedia("(min-width: 500px)");
+
+if(mediaqueryList500px.matches){
+    getLibraryOfImages(0, 2)
+    getLibraryOfImages(1, 2)
+    getLibraryOfImages(2, 2)
+}
 
 
 const imagesCarousel1 = document.querySelector("#images-carousel-1")
@@ -71,8 +86,12 @@ imagesCarousel3.append(...imagesContainer[2])
 
 //Generar mas images para media queries
 
-setTimeout(() => {
-    getLibraryOfImages(0)
-    getLibraryOfImages(1)
-    getLibraryOfImages(2)
-}, 3000);
+
+mediaqueryList500px.onchange = (e) => {
+    if(mediaqueryList.matches){
+        getLibraryOfImages(0, 2)
+        getLibraryOfImages(1, 2)
+        getLibraryOfImages(2, 2)
+    }
+} 
+
