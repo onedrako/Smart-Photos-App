@@ -4,7 +4,7 @@ const numberOfCarousel = 3
 const numberOfImages = 4
 
 const carouselContainer = []
-const imagesContainer = [[],[],[]]
+const imagesContainer = [[],[],[],[],[],[],[],[],[]]
 
 
 
@@ -69,6 +69,10 @@ imagesCarousel2.append(...imagesContainer[1])
 imagesCarousel3.append(...imagesContainer[2])
 
 
+//Generar mas images para media queries
 
-//
-
+setTimeout(() => {
+    getLibraryOfImages(0)
+    getLibraryOfImages(1)
+    getLibraryOfImages(2)
+}, 3000);

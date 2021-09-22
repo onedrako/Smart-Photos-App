@@ -115,37 +115,40 @@ main ol li a{
 }
 
 #images-carousel-1{
-    right: -154px;
+    left: 0px;
     animation: carousel 20s linear infinite;
+    animation-delay: 1s;
 } 
 
 #images-carousel-2{
     top: 160px;
     right: 0;
-    animation: carousel-2 20s linear infinite;
+    animation: carousel-inverse 20s linear infinite;
+    animation-delay: 1s;
 }
 
 #images-carousel-3{
     top: 320px;
-    right: -360px;
+    left: 0px;
     animation: carousel 20s linear infinite;
+    animation-delay: 1s;
 }
 
 @keyframes carousel{
     0%, 100%{
-        right: -154px;
+        left: 0px;
     }
     50%{
-        right: 0px;
+        left: -200px;
     }
 }
 
-@keyframes carousel-2{
+@keyframes carousel-inverse{
     0%, 100%{
         right: 0px;
     }
     50%{
-        right: -160px;
+        right: -200px;
     }
 }
 
@@ -208,15 +211,9 @@ main ol li a{
 
 @keyframes loader{
     0%{
-        opacity: 1;
         visibility: visible;
     }   
-    95%{
-        opacity: 1;
-        visibility: visible;
-    }
     100%{
-        opacity: 0;
         visibility: hidden;
     }
 }
@@ -242,7 +239,6 @@ main ol li a{
     position: absolute;
     z-index: 5;
     left: -250px;
-
     display: grid;
     place-items: start;
 
