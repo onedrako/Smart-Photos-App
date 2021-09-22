@@ -7,41 +7,149 @@
     <link rel="stylesheet" href="./styles.css">
 
   </head>
+  <script defer src="./sideBar.js"></script>
   <body cz-shortcut-listen="true">
+
+    <section class="side-bar--container hidden">
+      <div class="side-bar">
+        <div class="side-bar__content">
+          
+          <section class="side-bar__content--profile">
+            <img src="https://academia.coworkchillan.cl/wp-content/uploads/2020/03/default_avatar-5298a7fcd9a9a0ce0d2b32e9aa826a32cc521cb5249540190792626b75504b39.png" alt="">
+          </section>
+          
+          <section class="side-bar__content--google-photos">
+            <div class="google-photos--logo">
+              <img src="https://s.libertaddigital.com/2015/09/01/1920/1080/fit/logo-google-2015.png" alt="">
+              <p>Photos</p>
+            </div>
+            
+            <div class="google-photos--link-page hover-section">
+              <img src="https://www.bainsight.com/wp-content/uploads/2012/09/google-cloud-logo.png" alt="">
+              <a href="/home.html"><p>Smart Photo App</p></a>
+            </div>
+            <div class="google-photos--link-page ">
+              <img src="https://cdn-icons-png.flaticon.com/512/739/739249.png" alt="">
+              <p>Photos</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="">
+              <p>Explore</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/615/615075.png" alt="">
+              <p>Share </p>
+            </div>
+          </section>
+          
+          <section class="side-bar__content--library">
+            <h3>Library</h3>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/149/149220.png" alt="">
+              <p>Favorites</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/3342/3342137.png" alt="">
+              <p>Albums</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/2704/2704832.png" alt="">
+              <p>Utilities</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/1092/1092004.png" alt="">
+              <p>File</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" alt="">
+              <p>Bin</p>
+            </div>
+          </section>
+          
+          <section class="side-bar__content--others">
+            <hr>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" alt="">
+              <p>Settings</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/1828/1828940.png" alt="">
+              <p>Help and commentaries</p>
+            </div>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/595/595355.png" alt="">
+              <p>Download applications</p>
+            </div>
+          </section>
+          
+          <section class="side-bar__content--storage">
+            <hr>
+            <div class="google-photos--link-page">
+              <img src="https://cdn-icons-png.flaticon.com/512/165/165757.png" alt="">
+              <p>Storage</p>
+            </div>
+            <div class="storage-bar">
+              <hr class="storage-bar__base">
+              <!-- <hr class="storage-bar__load"> -->
+              <p class="storage-bar__text">0 GB to 15 GB in use</p>
+            </div>
+          </section>
+          
+          <section class="side-bar__content-footer">
+            <a href="/">Privacy</a>
+            <a href="/">Terms</a>
+            <a href="/">Politics</a>
+          </section>
+        </div>
+      </div>
+    </section>
     <header>
+      <img id="hamburger-menu" src="https://t3.ftcdn.net/jpg/01/66/66/56/240_F_166665616_guHEOd6zztex1rqNXoVzW2tNxIclPJpw.jpg" alt="" onclick="visibleModal()">
       <h1>Smart Photos App</h1>
       <nav>
         <ul>
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./upload.html">Upload</a></li>
-          <li><a href="./search.html">Search</a></li>
+          <li><a href="./upload.html"><img src="https://cdn-icons-png.flaticon.com/512/725/725008.png" alt=""></a></li>
+          <li><a href="./search.html"><img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt=""></a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      
-  <h2>Búsqueda</h2>
+    <main class="main-search">
 
-  <form method="get" action="http://104.154.178.76/search">
-    <label for="q">Escribe un término</label>
-    <input type="text" name="q">
-    <button type="submit">Cargar</button>
-  </form>
+      <section class="main-search--section">
+        <h2 class="upload-text">Search</h2>
+        <form class="search-form" method="get" action="http://104.154.178.76/search">
+          <label for="q">Write a term, for example: dog, cat, car</label>
+          <input type="text" name="q">
+          <button type="submit">Load</button>
+        </form>
 
-  
-    
-      <h3>Resultados para cat</h3>
+        <h3>Resultados para dog</h3>
+      </section>
 
+      <section class="result">
+        <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/purina-por-que-los-perros-mueven-la-cola.png?itok=Kw0lwckl">
       
-        <img src="./searchWithImages_files/gato-romano_0.jpg">
-      
-        <img src="./searchWithImages_files/images.jpeg">
-      
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLhfW2fo0OwRYO54HKe9l2vPabBMKo0JP3jPE3Y8CYHbeKFQWt35PQYwrO8Oa7i4l6phM&usqp=CAU">
 
-    
-  
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLhfW2fo0OwRYO54HKe9l2vPabBMKo0JP3jPE3Y8CYHbeKFQWt35PQYwrO8Oa7i4l6phM&usqp=CAU">
+
+        <img src="https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/gallery/6124cf315cafe8c3101f8bab/perro-slide.jpg">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLhfW2fo0OwRYO54HKe9l2vPabBMKo0JP3jPE3Y8CYHbeKFQWt35PQYwrO8Oa7i4l6phM&usqp=CAU">
+
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLhfW2fo0OwRYO54HKe9l2vPabBMKo0JP3jPE3Y8CYHbeKFQWt35PQYwrO8Oa7i4l6phM&usqp=CAU">
+
+      </section>
 
     </main>
-  
 
-</body></html>
+    <footer>
+      <a href="https://github.com/onedrako/Smart-Photos-App">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="">
+        <p>onedrako</p>
+      </a>
+    </footer>
+    
+</body>
+</html>
