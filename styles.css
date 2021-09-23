@@ -251,6 +251,10 @@ main ol li a{
 
 }
 
+.side-bar--container-laptop {
+    display: none;
+}
+
 .side-bar{
     width: 240px;
     height: 100%;
