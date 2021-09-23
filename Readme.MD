@@ -8,8 +8,11 @@ https://onedrako.github.io/Smart-Photos-App/
 
 
 https://onedrako.github.io/Smart-Photos-App/upload.html
+
 https://onedrako.github.io/Smart-Photos-App/upload-success.html
+
 https://onedrako.github.io/Smart-Photos-App/search.html
+
 https://onedrako.github.io/Smart-Photos-App/searchWithImages.html
 
 Lamentablemente no se como funciona docker y no pude generar la imagen con los estilos y código en JS y que entrara al contenedor, siempre se genero la misma imagen con los archivos iniciales sin tomar en cuenta los nuevos D:.
