@@ -1,0 +1,19 @@
+.side-bar--container-desktop{
+    max-height: 780px;
+    border-right: 2px solid var(--section-color);
+    box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(60 64 67 / 15%);
+    overflow: hidden;
+}
+
+.side-bar{
+    overflow-y: hidden;
+    height: 1000px;
+}
+
+.side-bar__content{
+    height: 80%;
+}
+
+.side-bar__content--google-photos{
+    height: 180px;
+}

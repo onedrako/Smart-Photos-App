@@ -1,0 +1,56 @@
+.side-bar--container-laptop{
+    display: none;
+}
+
+
+.home-main{
+    display: grid;
+    grid-template-areas: "side titles"
+                        "side images";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 150px 1fr;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.side-bar{
+    overflow-y: scroll;
+}
+.side-bar--container-desktop{
+    overflow: hidden;
+    display: grid;
+    grid-area: side;
+    max-height: 620px;
+    border-right: 2px solid var(--section-color);
+    box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+
+#profile{
+    display: none;
+}
+
+.google__header-logo{
+    width: 50px;
+    grid-column: 1 / 2;
+    display: inline-block;
+}
+
+.side-bar__content--google-photos{
+    margin-top: 10px;
+    height: 200px;
+}
+
+section.side-bar__content--profile{
+    display: flex;
+    justify-content: start;
+}
+
+section.side-bar__content--profile > img{
+    margin-left: 15px;
+}
+
+.side-bar__content--library h3{
+    justify-self: start;
+}

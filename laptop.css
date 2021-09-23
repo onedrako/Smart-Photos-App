@@ -1,0 +1,164 @@
+/* 950px */
+
+
+.home-main{
+    max-height: 900px;
+    display: grid;
+    grid-template-areas: "side titles"
+                        "side images";
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 150px 1fr;
+    padding: 0;
+    margin: 0;
+}
+
+.home-main h2{
+    grid-area: titles;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.home-main ol{
+    grid-area: titles;
+    margin-top: 50px;
+}
+
+.carousel-container{
+    grid-area: images;
+}
+
+
+.side-bar--container-laptop  {
+    display: block;
+    width: 70px;
+    height: 583px;
+    /* background: rgba(0, 0, 0, 0.1); */
+    position: absolute;
+    z-index: 3 ;
+    display: grid;
+    /* align-self: center; */
+    /* place-items: center; */
+    position: static;
+    grid-area: side;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-top: 15px;
+    border-right: 2px solid var(--section-color);
+    box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+
+.visible-side-bar{
+    animation: show-content 300ms linear  forwards;
+    overflow-y: scroll;
+}
+
+.side-bar--laptop-as-modal{
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+}
+
+@keyframes show-content {   
+    0%{
+        width: 0;
+    }
+    
+    100%{
+        width: 200px;
+    }
+}
+
+
+
+
+.side-bar__content--laptop{
+    height: 583px;
+    width: 200px;;
+    grid-area: side;
+}
+
+.side-bar__content--google-photos-laptop{
+    height: 180px;
+    display: grid;
+}
+
+.side-bar__content--library--laptop{
+    height: 250px;
+}
+
+.side-bar__content--library--laptop .google-photos--link-page{
+    height: 20%;
+}
+
+.side-bar__content--others-laptop{
+    height: 160px;
+}
+
+.side-bar__content--others-laptop .google-photos--link-page{
+    height: 30%;
+}
+
+.side-bar__content--storage-laptop{
+    height: 150px;
+} 
+
+
+
+/* LOGO Y HEADER */
+
+header{
+    grid-template-columns: 15% 20% 50% 15%;
+}
+
+header h1{
+    grid-column: 3 / 4;
+}
+
+header img{
+    grid-column: 0 / 1;
+}
+
+nav ul{
+    grid-column: 4 / 5;
+}
+
+
+.google__header-logo{
+    width: 50px;
+    grid-column: 2 / 3;
+    display: inline-block;
+}
+
+.google__header-logo-invisible{
+    width: 50px;
+    grid-column: 2 / 3;
+    display: none;
+}
+
+
+#hamburger-menu{    
+    display: none;
+}
+
+#profile{
+    display: block;
+}
+
+.main-search{
+    justify-content: center;
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.main-search--section{
+    margin: 0 auto;
+}
+
+.result{
+    grid-template-columns: repeat(4, 25%);
+}
+
+.result img{
+    width: 200px;
+}
