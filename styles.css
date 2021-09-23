@@ -694,3 +694,7 @@ form button{
   .result:nth-child(11n+9) {
     grid-row: span 3;
   }
+
+  #profile{
+      display: none;
+  }
