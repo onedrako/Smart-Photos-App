@@ -51,6 +51,7 @@ function verifyToCloseSideBar(Event) {
 const mediaQuery950px = window.matchMedia("(min-<width: 950px)")
 const maxMediaQuery950px = window.matchMedia("(max-width: 950px)")
 
+const desktopMediaQuey =  window.matchMedia("(min-<width: 950px)")
 
 
 mediaQuery950px.onchange = (e) => {
@@ -67,3 +68,7 @@ mediaQuery950px.onchange = (e) => {
 //     sideBarForMediaQuery.classList.add("hidden")
 // }
 
+if(desktopMediaQuey.matches){
+    modal.classList.remove("hidden")
+    modal.classList.add("visible")
+}

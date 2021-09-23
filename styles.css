@@ -698,3 +698,7 @@ form button{
   #profile{
       display: none;
   }
+
+  .side-bar--container-desktop{
+    display: none;
+  }
